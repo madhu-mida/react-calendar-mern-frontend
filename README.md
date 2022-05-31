@@ -1,3 +1,10 @@
+# Live Site
+https://ubiquitous-cocada-367feb.netlify.app/
+
+# Backend GitHub Repo
+https://github.com/madhu-mida/react-calendar-mern-backend
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

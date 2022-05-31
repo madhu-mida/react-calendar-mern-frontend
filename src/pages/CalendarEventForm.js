@@ -25,7 +25,7 @@ const CalendarEventForm = (props) => {
 
     const navigate = useNavigate();
 
-    const URL = "http://localhost:4000/";
+    const URL = "https://ms-react-mern-calendar.herokuapp.com/";
 
     const handleChange = (event) => {
         setForm((prevState) => ({

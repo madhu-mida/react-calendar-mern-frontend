@@ -3,7 +3,7 @@ import CalendarEventForm from "../pages/CalendarEventForm";
 
 const Main = () => {
 
-    const URL = "http://localhost:4000/";
+    const URL = "https://ms-react-mern-calendar.herokuapp.com/";
     return (<></>);
 }
 

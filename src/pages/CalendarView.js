@@ -14,7 +14,7 @@ const CalendarView = () => {
     const days = [];
     const weekDates = [];
 
-    const URL = "http://localhost:4000/";
+    const URL = "https://ms-react-mern-calendar.herokuapp.com/";
 
     for (let i = 0; i < 7; i++) {
         let date = new Date();

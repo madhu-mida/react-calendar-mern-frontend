@@ -1,0 +1,81 @@
+/* .App {
+  text-align: center;
+} */
+
+body {
+  background: #948E99;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2E1437, #948E99);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2E1437, #948E99); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;  
+  font-family: 'Bitter', serif;
+}
+
+.date-button {
+  height: 29px;
+  width: 31px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 11px;
+  background-color: lightslategray;
+  color: white;
+  border-width: 0;
+}
+
+.calendar-title {
+  font-size: 10px;
+  font-weight: bolder;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-button {
+  position: fixed;
+    right: 5%;
+    margin-bottom: 3%;
+
+}
+
+.form-title {
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-sub-title {
+  font-weight: bold;
+  /* margin-left: 3px; */
+}
+
+.create-event {
+  padding: 30px;
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 20px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.event-card-div {
+  padding: 0px 30px;
+}
+
+.event-card {
+  margin-top: 27px;
+  color: black;
+}
+
+.work-card {
+  background-color:darkblue;
+  color: white;
+}
+
+.personal-card {
+  background-color: brown;
+  color: white;
+}
+

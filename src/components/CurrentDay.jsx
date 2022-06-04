@@ -20,7 +20,7 @@ export default function CurrentDay() {
     async function getWeatherData(lat, long) {
         // let lat = lat;
         // let long = long;
-        const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}`;
+        const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${API_KEY}`;
 
         const weatherData = await fetch((weatherURL)).then(
             res => res.json()
@@ -43,12 +43,21 @@ export default function CurrentDay() {
 
 
     return (
-        <>
+        <div className="weather-day-details">
+
             <div id="current-day">
                 <h2 className="day">It's {`${currentDateElements[0]}`}</h2>
                 <h3 className="day">{`${new Date().toLocaleDateString('en-US')}`}</h3>
             </div>
-        </>
+            {weatherState && <div>
+                <h3 className="day">{weatherState.name}</h3>
+            </div>}
+            {weatherState && <div>
+                <h3 className="day">{weatherState.main.temp}&deg;F</h3>
+                <h3 className="day">{weatherState.weather[0].main}</h3>
+            </div>}
+
+        </div>
 
 
     );

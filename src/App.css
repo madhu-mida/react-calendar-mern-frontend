@@ -79,9 +79,9 @@ body {
 }
 
 #current-day {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   text-align: center;
-  background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  
   height: 65px;
   align-items: center;
   display: flex;
@@ -101,4 +101,11 @@ body {
 
 .card-title-priority {
   justify-content: space-around;
+}
+
+.weather-day-details {
+  background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }

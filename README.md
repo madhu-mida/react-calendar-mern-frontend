@@ -4,6 +4,10 @@ https://ubiquitous-cocada-367feb.netlify.app/
 # Backend GitHub Repo
 https://github.com/madhu-mida/react-calendar-mern-backend
 
+##### Wireframe
+
+![Screenshot](Calendar.png)
+
 
 # Getting Started with Create React App
 

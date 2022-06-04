@@ -13,7 +13,7 @@ https://github.com/madhu-mida/react-calendar-mern-backend
 | Description | A website where users can create and maintain schedule|
 | Live Website Frontend | https://ubiquitous-cocada-367feb.netlify.app/|
 | Live Website Backend | https://ms-react-mern-calendar.herokuapp.com/ |
-| Repo Frontend| https://ms-react-mern-calendar.herokuapp.com/ |
+| Repo Frontend| https://github.com/madhu-mida/react-calendar-mern-frontend |
 | Repo Backend|  https://github.com/madhu-mida/react-calendar-mern-backend|
 
 

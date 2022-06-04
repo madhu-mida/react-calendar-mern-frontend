@@ -69,7 +69,7 @@ const CalendarEventForm = (props) => {
     const getParticularEvent = async (id) => {
         const data = await fetch((URL + "event/" + id)).then(res => res.json());
         setForm({
-            date: format(parseISO(data.date), "MM-dd-yyyy"),
+            date: data.dateString,
             title: data.title,
             description: data.description,
             startTime: data.startTime,
@@ -149,7 +149,18 @@ const CalendarEventForm = (props) => {
     return (
         <div className="create-event">
             <div className="form-title">
-                <h1>Create Event</h1>
+                <a href="#" onClick={() => { navigate("/") }} style={{ color: "red" }}>
+
+                    Cancel
+                </a>
+                <h1>New Event</h1>
+                {props.src === "create" && <a href="#" onClick={handleClick} style={{ color: "red" }}>
+
+                    Add
+                </a>}
+                {props.src === "edit" &&
+                    <a href="#" onClick={handleUpdateClick} style={{ color: "red" }}>Update</a>
+                }
             </div>
 
             < Form >
@@ -169,9 +180,6 @@ const CalendarEventForm = (props) => {
                     <Form.Control name="description" type="text" placeholder="Description" value={form.description}
                         onChange={handleChange} />
                 </Form.Group>
-
-
-
 
                 <Form.Group className="mb-3">
                     <Form.Label className="form-sub-title">Type</Form.Label>
@@ -201,31 +209,7 @@ const CalendarEventForm = (props) => {
                 </Form.Group>
 
             </Form >
-            <div className="form-submit">
-                {props.src === "create" &&
-                    <Button variant="primary" type="button"
-                        onClick={handleClick}>
-                        Add
-                    </Button>}
-                {props.src === "edit" &&
-                    <Button variant="primary" type="button"
-                        onClick={handleUpdateClick}>
-                        Update
-                    </Button>}
 
-                {props.src === "edit" &&
-                    <Button variant="primary" type="button"
-                        onClick={handleDeleteClick}
-                        style={{ marginLeft: "5px", width: "75px" }}
-                    >
-                        Delete
-                    </Button>}
-                <Button variant="primary" type="button"
-                    onClick={() => { navigate("/") }}
-                    style={{ marginLeft: "5px", width: "75px" }}>
-                    Cancel
-                </Button>
-            </div>
         </div>
     );
 }

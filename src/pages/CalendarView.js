@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import { format } from "date-fns";
 import { IconContext } from "react-icons";
-import { AiFillPlusCircle } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
 import ShowAllEvents from "../components/ShowAllEvents";
+import CurrentDay from "../components/CurrentDay";
 
 
 
@@ -51,15 +52,16 @@ const CalendarView = () => {
             <div className="calendar-title">
                 <h1>Calendar</h1>
                 <div className="add-button" >
-                    <IconContext.Provider value={{ color: "yellow", size: "3em" }}>
+                    <IconContext.Provider value={{ color: "yellow", size: "2em" }}>
                         <div>
-                            <a href={`/event/${selectedDate}`}><AiFillPlusCircle /></a>
+                            <a href={`/event/${selectedDate}`}><AiOutlinePlus /></a>
                         </div>
                     </IconContext.Provider>
                 </div>
 
             </div>
-            <Container>
+            <CurrentDay />
+            <Container style={{ marginTop: "20px" }}>
                 <Row>
                     {days.map((element, index) => {
                         return (
@@ -83,6 +85,7 @@ const CalendarView = () => {
                     }
                 </Row>
             </Container>
+
             <ShowAllEvents events={events} />
         </div>
     );

@@ -78,3 +78,27 @@ body {
   color: white;
 }
 
+#current-day {
+  margin-top: 20px;
+  text-align: center;
+  background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  height: 65px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.day {
+  font-size: 15px;
+}
+
+.card-title-edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title-priority {
+  justify-content: space-around;
+}

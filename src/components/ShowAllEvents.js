@@ -3,8 +3,10 @@ import { CCard, CCardHeader, CCardBody, CCardTitle, CCardText, CButton } from '@
 import { MdModeEditOutline } from "react-icons/md";
 import { FcHighPriority, FcLowPriority } from "react-icons/fc"
 import { IconContext } from "react-icons";
+import { useNavigate } from "react-router-dom";
 
 const ShowAllEvents = ({ events }) => {
+    const navigate = useNavigate();
     return (
         <div>
             {events && events.map((element, index) => {
@@ -24,8 +26,8 @@ const ShowAllEvents = ({ events }) => {
                                     </div>
                                     <IconContext.Provider value={{ color: "white", size: "1.2em" }}>
                                         <div>
-                                            <a href={`/edit/${element._id}`
-                                            }><MdModeEditOutline /></a>
+                                            <a href="#"
+                                                onClick={() => { navigate(`/edit/${element._id}`) }}><MdModeEditOutline /></a>
                                         </div>
                                     </IconContext.Provider>
                                 </div>

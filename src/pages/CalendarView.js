@@ -5,6 +5,7 @@ import { IconContext } from "react-icons";
 import { AiOutlinePlus } from "react-icons/ai";
 import ShowAllEvents from "../components/ShowAllEvents";
 import CurrentDay from "../components/CurrentDay";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -14,6 +15,8 @@ const CalendarView = () => {
 
     const days = [];
     const weekDates = [];
+
+    const navigate = useNavigate();
 
     const URL = "https://ms-react-mern-calendar.herokuapp.com/";
 
@@ -54,7 +57,7 @@ const CalendarView = () => {
                 <div className="add-button" >
                     <IconContext.Provider value={{ color: "yellow", size: "2em" }}>
                         <div>
-                            <a href={`/event/${selectedDate}`}><AiOutlinePlus /></a>
+                            <a href="#" onClick={() => { navigate(`/event/${selectedDate}`) }}><AiOutlinePlus /></a>
                         </div>
                     </IconContext.Provider>
                 </div>

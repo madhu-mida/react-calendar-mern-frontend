@@ -160,6 +160,9 @@ const CalendarEventForm = (props) => {
                 </a>}
                 {props.src === "edit" &&
                     <a href="#" onClick={handleUpdateClick} style={{ color: "red" }}>Update</a>
+                }&emsp;
+                {props.src === "edit" &&
+                    <a href="#" onClick={handleDeleteClick} style={{ color: "red" }}>Delete</a>
                 }
             </div>
 
